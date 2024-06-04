@@ -11,19 +11,16 @@ public class Human {
     private Human mother;
     private Gender gender;
 
-    public Human(String name, Gender gender, LocalDate dateOfBirth) {
-        this.name = name;
-        this.dateOfBirth = dateOfBirth;
-        this.gender = gender;
-        this.children = new ArrayList<>();
-    }
-
     public Human(String name, Gender gender, LocalDate dateOfBirth, LocalDate dateOfDeath) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.dateOfDeath = dateOfDeath;
         this.gender = gender;
         this.children = new ArrayList<>();
+    }
+
+    public Human(String name, Gender gender, LocalDate dateOfBirth) {
+       this(name,  gender, dateOfBirth,null);
     }
 
   
